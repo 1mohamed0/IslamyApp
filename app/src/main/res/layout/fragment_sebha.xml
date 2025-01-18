@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg1"
     tools:context=".home.tabs.SebhaTab.SebhaFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="sebha" />
+        android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/zekr_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/jhannat_font"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/sebha_imv"
+            app:layout_constraintBottom_toBottomOf="@id/sebha_imv"
+            app:layout_constraintStart_toStartOf="@id/sebha_imv"
+            app:layout_constraintEnd_toEndOf="@id/sebha_imv"
+            android:text="الحمد الله" />
+
+        <ImageView
+            android:id="@+id/sebha_imv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/sebha"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="50dp" />
+
+        <TextView
+            android:id="@+id/zekr_Count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jhannat_font"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintTop_toBottomOf="@id/zekr_name"
+            app:layout_constraintStart_toStartOf="@id/sebha_imv"
+            app:layout_constraintEnd_toEndOf="@id/sebha_imv"
+            android:text="0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
