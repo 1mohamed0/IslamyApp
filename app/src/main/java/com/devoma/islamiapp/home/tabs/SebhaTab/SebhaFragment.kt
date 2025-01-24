@@ -48,7 +48,5 @@ class SebhaFragment : Fragment() {
         viewBinding.sebhaImv.rotation = currentRotation
     }
 
-    private fun updataZekr() {
-        viewBinding.zekrName.text = zekrList[courrantZekrIndex]
-    }
+
 }
