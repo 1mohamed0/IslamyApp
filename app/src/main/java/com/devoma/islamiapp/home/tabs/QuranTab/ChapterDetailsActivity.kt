@@ -30,6 +30,10 @@ class ChapterDetailsActivity : AppCompatActivity() {
     }
 
     private fun init() {
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         chapter = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             intent.getParcelableExtra(AppConstant.Extra.EXTRA_CHAPTER, Chapter::class.java)
         } else {
@@ -65,5 +69,10 @@ class ChapterDetailsActivity : AppCompatActivity() {
             e.printStackTrace()
             versesList = emptyList() // or handle it in a way that makes sense for your app
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }
